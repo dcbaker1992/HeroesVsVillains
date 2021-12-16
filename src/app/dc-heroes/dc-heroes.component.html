@@ -1,0 +1,16 @@
+<br>
+<br>
+<div>
+    <div id="flex">
+        <div class="char-card-container" *ngFor="let hero of characters.heroes.dc">
+            <div class="char-card" [style.backgroundImage]="'url(' + hero.img + ')'">
+                <div class="description">
+                    <p class="name">{{hero.name}}</p>
+                    <p class="secretId">{{hero.secretId}}</p>
+                    <p>{{hero.location}}</p>
+                    <p>{{hero.powers}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

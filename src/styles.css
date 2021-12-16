@@ -1,0 +1,240 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Marvel";
+    src: url("./assets/fonts/Marvel-Regular.ttf");
+}
+
+body, html {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: black;
+    height: 100%;
+}
+
+#main {
+    background-color: rgb(224, 0, 0);
+    width: 100%;
+    min-height: 100%;
+    transition: 0.6s;
+}
+
+#main.dc {
+    background-color: rgb(53, 53, 53);
+}
+
+#flex {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    width: calc(100% - 50px);
+    left: 25px;
+    box-shadow: 0 0 5px #5e0000;
+    animation: .75s fadeInUp;
+    max-width: 1150px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.char-card-container {
+    min-width: 200px;
+    width: 200px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgb(109, 109, 109);
+    transition: 0.6s;
+}
+
+.char-card-container:hover {
+    box-shadow: 0 0 12px black;
+}
+
+.char-card {
+    width: 100%;
+    height: 100%;
+    background-size: 300px 300px;
+    background-position: -50px -10px;
+    transition: 0.6s;
+}
+
+.char-card:hover {
+    background-size: 350px 350px;
+    background-position: -80px -40px;
+}
+
+.description {
+    position: relative;
+    top: 250px;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    transition: 0.6s;
+    padding: 15px;
+    box-sizing: border-box;
+    border-top: 6px solid red;
+}
+
+.char-card:hover .description {
+    top: 80px;
+    background-color: red;
+}
+
+.name {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 16px !important;
+    /*text-decoration: underline;*/
+}
+
+.description p {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: rgb(202, 0, 0);
+    border: none;
+    width: fit-content;
+    padding: 10px;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 0 0 2px black;
+    border-radius: 10px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+button:hover {
+    background-color: rgb(88, 0, 0);
+}
+
+nav {
+    position: absolute;
+    height: 100px;
+    right: 0;
+    top: 0;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    width: fit-content;
+    color: white;
+    padding: 10px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    width: 120px;
+    background-color: rgb(158, 0, 0);
+    transition: 0.5s;
+}
+
+nav a:hover {
+    background-color: rgb(233, 0, 0);
+}
+
+nav a.active {
+    background-color: rgb(204, 0, 0);
+}
+
+#title-bar.dc a {
+    background-color: rgb(15, 15, 15);
+}
+
+#title-bar.dc a {
+    background-color: rgb(0, 0, 0);
+}
+
+#title-bar.dc a.active {
+    background-color: rgb(29, 29, 29) !important;
+}
+
+#title-bar.dc a:hover {
+    background-color: rgb(87, 87, 87);
+}
+
+#title-bar.dc button {
+    background-color: rgb(58, 58, 58);
+}
+
+#title-bar.dc button:hover {
+    background-color: rgb(85, 85, 85);
+}
+
+.centered {
+    position: relative;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.centered > * {
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#title-bar {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(158, 0, 0);
+    margin-bottom: 40px;
+    box-shadow: 0 0 5px black;
+}
+
+#title-bar.dc {
+    background-color: black;
+}
+
+#title-bar img {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    top: 10px;
+}
+
+#title {
+    text-align: center;
+    line-height: 110px;
+    font-size: 80px;
+    color: white;
+    margin: 0;
+    font-family: "Marvel";
+}
+
+#title-bar.dc {
+    background-color: rgb(0, 0, 0);
+}
+
+/*#buttons-container {
+    background-color: rgb(180, 0, 0);
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 25px;
+    box-shadow: 0 0 3px rgb(116, 116, 116);
+}*/
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        top: 100px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}

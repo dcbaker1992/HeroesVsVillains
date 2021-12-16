@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "hero-vs-villains2021": {
+      "hosting": {
+        "hero-vs-villains": [
+          "hero-vs-villains2021"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "hero-vs-villains2021"
+  }
+}

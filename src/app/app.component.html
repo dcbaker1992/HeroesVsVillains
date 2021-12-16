@@ -1,0 +1,22 @@
+<div id="main" [ngClass]="isMarvel ? 'marvel' : 'dc'">
+    <div id="title-bar" [ngClass]="isMarvel ? 'marvel' : 'dc'">
+        <button (click)="switchComicPage()">Switch to {{isMarvel ? "DC" : "Marvel"}}</button>
+        <div [ngSwitch]="isMarvel" class="centered">
+            <p *ngSwitchCase="true" id="title">MARVEL</p>
+            <img *ngSwitchCase="false" src="./assets/dc.jpg"/>
+        </div>
+        <nav>
+            <div [ngSwitch]="!isMarvel">
+                <div *ngSwitchCase="true">
+                    <a routerLink="/dc-heroes" routerLinkActive="active">DC Heroes</a>
+                    <a routerLink="/dc-villains" routerLinkActive="active">DC Villains</a>
+                </div>
+                <div *ngSwitchCase="false">
+                    <a routerLink="/marvel-heroes" routerLinkActive="active">Marvel Heroes</a>
+                    <a routerLink="/marvel-villains" routerLinkActive="active">Marvel Villains</a>   
+                </div>
+            </div>
+        </nav>
+    </div>
+    <router-outlet></router-outlet>
+</div>
